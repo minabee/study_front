@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화소개</title>
+    <style>
+        *{padding: 0; margin: 0;}
+        li{list-style: none;}
+        .movie{
+            width: 1250px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .movie h3{
+            width: 100%; height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 30px;
+        }
+        .movie p{
+            font-size: 14px;
+            color: #333;
+            margin: 30px 200px;
+            /* 1. 영역설정 */
+            width: 800px; height: 100%;
+            /* 2. 글자줄임공식 */
+            white-space: nowrap; /*텍스트 한 줄 처리*/
+            overflow: hidden; /*넘어간 자손 안보이게 처리*/
+            text-overflow: ellipsis; /*...처리*/
+        }
+        .movie li{
+            float: left;
+            width: 300px; height: 200px;
+            margin-right: 15px;
+        }
+        .movie li:last-child{
+            margin-right: 0;
+        }
+        .movie a{
+            display: block; /*a태그는 inline요소이므로 영역을 주기위해 block으로 처리함*/
+            width: 100%; height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .movie img{
+            width: 100%; height: 100%;
+            object-fit: cover;
+        }
+        .movie figure{
+            width: 100%; height: 100%;
+        }
+        .movie figcaption{
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            position: absolute; /*이미지와 겹치게 처리*/
+            top: 0; left: 0;
+
+            color: #fff; text-align: center;
+            line-height: 200px;
+
+            opacity: 0; /*처음엔 안보이고*/
+            transition: 0.3s;
+
+        }
+        .movie a:hover figcaption, .movie a:focus figcaption{
+            opacity: 1; /*마우스 올리면 보이게 처리*/
+        }
+    </style>
+</head>
+<body>
+    <div class="movie">
+        <h3>Up</h3>
+        <p>평생 모험을 꿈꿔 왔던 ‘칼’ 할아버지는 수천 개의 풍선을 매달아 집을 통째로 남아메리카로 날려 버리는데, ‘칼’ 할아버지의 이 위대한 모험에 초대 받지 않은 불청객이 있었으니, 바로 황야의 탐험가 ‘러셀’! 지구상에 둘도 없을 이 어색한 커플이 함께 하는 대모험.</p>
+        <ul>
+            <li>
+                <a href="#">
+                    <figure>
+                        <img src="./image/업1.png" alt="이미지01">
+                        <figcaption>사진소개1</figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <figure>
+                        <img src="./image/업2.png" alt="이미지02">
+                        <figcaption>사진소개2</figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <figure>
+                        <img src="./image/업3.png" alt="이미지03">
+                        <figcaption>사진소개3</figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <figure>
+                        <img src="./image/업4.png" alt="이미지04">
+                        <figcaption>사진소개4</figcaption>
+                    </figure>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

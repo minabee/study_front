@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .row{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-gap: 50px;
+        margin: 100px auto;
+        height: 300px;
+        width: 1200px;
+        background-color: #777777;
+        padding: 3%;
+    }
+    .item{
+        background-color: cornflowerblue;
+    }
+</style>
+<body>
+    <!-- 
+    Flex는 한 방향 레이아웃 시스템이고 (1차원)
+    Grid는 두 방향(가로-세로) 레이아웃 시스템 (2차원)
+     -->
+    <div class="row">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item">item 4</div>
+        <div class="item">item 5</div>
+    </div>
+</body>
+</html>

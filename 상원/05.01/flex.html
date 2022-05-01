@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .row{
+            display: flex;
+            justify-content: space-between; /* 자식들 간격*/
+            /* flex-direction: column; 아이템 방향 세로 */
+            flex-wrap: wrap;
+            margin: 100px auto;
+            height: 300px;
+            width: 1200px;
+            background-color: #777777;
+            padding: 3%;
+        }
+        .item{
+            flex-basis: 15%;
+            background-color: white;
+            border: 1px solid;
+        }
+    </style>
+<body>
+    <div class="row">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item">item 4</div>
+        <div class="item">item 5</div>
+        <div class="item">item 6</div>
+    </div>
+    <div class="row">
+        <div class="item">item 7</div>
+        <div class="item">item 8</div>
+        <div class="item">item 9</div>
+        <div class="item">item 10</div>
+        <div class="item">item 11</div>
+        <div class="item">item 12</div>
+    </div>
+</body>
+</html>
